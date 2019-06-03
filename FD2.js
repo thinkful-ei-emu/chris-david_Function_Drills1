@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 /* eslint-disable no-console */
 'use strict';
 
@@ -11,17 +12,41 @@ console.log(jediName('David', 'Queen'));
 
 function beyond(num) {
   if (num === Infinity) {
-    log('And beyond');
+    return 'And beyond';
   }
   else if (num > 0) {
-    log('To infinity');
+    return 'To infinity';
   }
   else if (num < 0) {
-    log('To negative infinity');
+    return 'To negative infinity';
   }
   else {
-    log('Staying home');
+    return 'Staying home';
   }
 }
 
-beyond();
+log(beyond());
+function decode(code){
+let arry = code.split(' ');
+let answer='';
+for(var x=0;x<=arry.length-1;x++){
+    console.log(arry[x]);
+    switch(arry[x][0]){
+        case 'a' : answer += arry[x][1];
+        break;
+        case 'b' : answer += arry[x][2];
+        break;
+        case 'c' : answer += arry[x][3];
+        break;
+        case 'd' : answer += arry[x][4];
+        break;
+        default: answer+= ' '; 
+
+    }
+    
+}
+return answer;
+
+
+}
+log(decode('craft block argon meter bells brown croon droop'));

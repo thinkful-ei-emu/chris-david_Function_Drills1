@@ -1,3 +1,3 @@
 git add .
-git commit -m "added to infinity"
+git commit -m "added to decoder"
 git push
