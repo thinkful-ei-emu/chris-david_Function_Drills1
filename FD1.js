@@ -2,6 +2,9 @@
 /* eslint-disable no-console */
 // eslint-disable-next-line strict
 'use strict';
+const log = function(msg){
+    console.log(msg);
+};
 var getYearOfBirth = function(age){ 
     if (age < 0) {
         throw new Error('Age can not be negative');
