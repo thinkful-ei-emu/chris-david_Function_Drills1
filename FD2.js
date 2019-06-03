@@ -50,3 +50,43 @@ return answer;
 
 }
 log(decode('craft block argon meter bells brown croon droop'));
+
+function howMany(month, leapYear) {
+  let answer = '';
+  switch(month){
+  case 'February' :
+    if (leapYear) {
+      answer = 29;
+    }
+    else {
+      answer = 28;
+    }
+    break;
+  
+  case 'January':
+  case 'March':
+  case 'July':
+  case 'August':
+  case 'October':
+  case 'December':
+    answer = 31;
+    break;
+
+  case 'April':
+  case 'May':
+  case 'June':
+  case 'September':
+  case 'November':
+    answer = 30;
+    break;
+
+  default:
+     throw new Error('Must provide a valid month.');
+
+  }
+
+
+  return `${month} has ${answer} days`;
+}
+
+log(howMany('February', true));
