@@ -12,8 +12,11 @@ var getYearOfBirth = function(age){
     return 2019 - age;  
 };
 var createGreeting = function(name, age){
-  if(name === '' || age === ''){
+  if(name === undefined || age === undefined){
       throw new Error('arguments not vaild');
+  }
+  if(isNaN(age) || typeof(name) === typeof('name')){
+      throw new TypeError('Arguments not valid');
   }
   return `Hi, my name is ${name} and I am ${age} years old. I was born in ${getYearOfBirth(age)}.`;
 };
