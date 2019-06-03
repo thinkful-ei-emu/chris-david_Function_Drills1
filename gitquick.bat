@@ -1,3 +1,3 @@
 git add .
-git commit -m "automated commit"
+git commit -m "added to infinity"
 git push
