@@ -12,6 +12,9 @@ var getYearOfBirth = function(age){
     return 2019 - age;  
 };
 var createGreeting = function(name, age){
+  if(name === '' || age === ''){
+      throw new Error('arguments not vaild');
+  }
   return `Hi, my name is ${name} and I am ${age} years old. I was born in ${getYearOfBirth(age)}.`;
 };
 try {
