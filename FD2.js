@@ -90,3 +90,43 @@ function howMany(month, leapYear) {
 }
 
 log(howMany('February', true));
+var cpu;
+function RPS(choice){
+    /*
+    1 = rock
+    2 = sisscor
+    3 = paper
+    
+    */
+   /*cpu= sisscors
+   player= rock*/
+    cpu = Math.floor(Math.random()*3)+1;//number between 1 and 3
+    if(choice > 3 || choice <= 0){
+        throw new Error('not a valid choice');  
+    }
+
+    if(choice === cpu){
+        return 'tie';
+    }
+    if(choice === 3 ){
+        if(cpu ===1){
+            return 'player wins';
+        }else{
+            return'CPU wins';
+        }
+    }
+    else if(cpu === 3 ){
+        if(choice ===1){
+            return 'cpu wins';
+        }else{
+            return'player wins';
+        }
+    }else if(choice<cpu){
+        return 'player wins';
+    }else{
+        return 'CPU wins';
+    }
+
+
+}
+log(RPS(1));
